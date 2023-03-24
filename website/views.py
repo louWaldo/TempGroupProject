@@ -86,6 +86,8 @@ def price_module():
         address = request.form.get('address')
         delivery_date = request.form.get('date')
 
+        #in phase 4, the line below will look like
+        # total = givePrice(gallons, state,...., other factors that may determine price)
         total = 5*gallons
         
         newTransaction = Transaction(gallons=gallons,total=total, delivery_date=delivery_date, user_id=current_user.id)
